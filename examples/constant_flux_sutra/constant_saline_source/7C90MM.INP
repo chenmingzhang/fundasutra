@@ -1,0 +1,140 @@
+# this case serves an example to check the velocity in ele file, particularly what
+# is the unit of the velocity
+##
+##  DATASET 1:  Output Heading
+##    [TITLE1]
+##    [TITLE2]
+'1-D column simulation for 7c sand (2013)'
+'the lab data is from environmental laborotory'
+##
+##  DATASET 2:  Simulation Type and Mesh Structure
+##    [SIMULA]
+'SUTRA VERSION 2.2 SOLUTE TRANSPORT'
+##    [MSHSTR]           [NN1]     [NN2]     [NN3]
+## [NBLK1]   [LDIV1]
+## [NBLK2]   [LDIV2]
+## [NBLK3]   [LDIV3]
+'2D REGULAR MESH'           2        6 
+##
+##  DATASET 3:  Simulation Control Numbers
+##    [NN]      [NE]    [NPBC]    [NUBC]    [NSOP]    [NSOU]    [NOBS]
+       12        5        2         0        2        0        0
+##
+##  DATASET 4:  Simulation Mode Options
+##   [CUNSAT]           [CSSFLO]            [CSSTRA]          [CREAD]  [ISTORE]
+'UNSATURATED'        'TRANSIENT'         'TRANSIENT'           'COLD'    50000  
+##
+##  DATASET 5:  Numerical Control Parameters
+##         [UP]         [GNUP]         [GNUU]
+            0.            0.01           0.01
+##
+##  DATASET 6:  Temporal Control and Solution Cycling Data
+## [NSCH]         [NPCYC]         [NUCYC]
+        1               1           500
+## [SCHNAM]        [SCHTYP]         [CREFT]       [SCALT]       [NTMAX]     [TIMEI]     [TIMEL]   [TIMEC]   [NTCYC]  [TCMULT]   [TCMIN]      [TCMAX]
+'TIME_STEPS'   'TIME CYCLE'       'ELAPSED'          100.         100         0.        20000.        1.     300        2.        1.              1.
+'-'
+##
+##  DATASET 7:  Iteration and Matrix Solver Controls
+##  [ITRMAX]        [RPMAX]        [RUMAX]
+      1000            1.0E-5        1.0E-5
+##  [CSOLVP]  [ITRMXP]         [TOLP]
+ 'ORTHOMIN'    3000          1.0E-12
+##  [CSOLVU]  [ITRMXU]         [TOLU]
+ 'ORTHOMIN'     100          1.0E-12
+##
+##
+##  DATASET 8:  Output Controls and Options
+## [NPRINT]  [CNODAL]  [CELMNT]  [CINCID]  [CPANDS]    [CVEL]   [CCORT]    [CBUDG]   [CSCRN]  [CPAUSE]
+     1       'N'       'N'       'N'       'N'       'N'      'N'        'Y'        'N'        'Y' 
+## [NCOLPR]    [NCOL]
+     1  'N'  'X'  'Y'  'P'  'U'  'S'  '-' 
+## [LCOLPR]    [LCOL]
+     1 'E'  'X'  'Y'  'VX' 'VY' '-' 
+## [NOBCYC]    [INOB]
+
+##  [NBCFPR]  [NBCSPR]  [NBCPPR]  [NBCUPR]  [CINACT]
+     1         1       1      1       'Y'
+##
+##  DATASET 9:  Fluid Properties
+##     [COMPFL]           [CW]       [SIGMAW]        [RHOW0]       [URHOW0]        [DRWDU]        [VISC0]   [DVIDU]
+         0.0                1.         5.D-11         1.0E+3             0.     7.0224E+02         1.E0    3.25E-3
+##
+##  DATASET 10:  Solid Matrix Properties
+##     [COMPMA]           [CS]       [SIGMAS]         [RHOS]
+         0.0               0.             0.             1.
+##
+##  DATASET 11:  Adsorption Parameters
+##     [ADSMOD]         [CHI1]         [CHI2]
+ 'NONE' 
+##
+##  DATASET 12:  Production of Energy or Solute Mass
+##     [PRODF0]       [PRODS0]       [PRODF1]       [PRODS1]
+             0.             0.             0.             0.
+##
+##  DATASET 13:  Orientation of Coordinates to Gravity
+##      [GRAVX]        [GRAVY]        [GRAVZ]
+             0.      0.
+#             0.      -9.81E+00
+##  DATASET 14:  Nodewise Data
+##                           [SCALX]        [SCALY]        [SCALZ]       [PORFAC]
+'NODE'                 1.0000000D+00  1.0000000D+00  0.5000000D+00  1.0000000D+00
+##    [II] [NREG(II)]        [X(II)]        [Y(II)]        [Z(II)]      [POR(II)]
+         1          0  0.0000000D+00  0.0000000D+00  1.0000000D-00  4.0000000D-01
+         2          0  1.0000000D+00  0.0000000D+00  1.0000000D-00  4.0000000D-01
+         3          0  2.0000000D+00  0.0000000D+00  1.0000000D-00  4.0000000D-01
+         4          0  3.0000000D+00  0.0000000D+00  1.0000000D-00  4.0000000D-01
+         5          0  4.0000000D+00  0.0000000D+00  1.0000000D-00  4.0000000D-01
+         6          0  5.0000000D+00  0.0000000D+00  1.0000000D-00  4.0000000D-01
+         7          0  0.0000000D+00  1.0000000D+00  1.0000000D-00  4.0000000D-01
+         8          0  1.0000000D+00  1.0000000D+00  1.0000000D-00  4.0000000D-01
+         9          0  2.0000000D+00  1.0000000D+00  1.0000000D-00  4.0000000D-01
+        10          0  3.0000000D+00  1.0000000D+00  1.0000000D-00  4.0000000D-01
+        11          0  4.0000000D+00  1.0000000D+00  1.0000000D-00  4.0000000D-01
+        12          0  5.0000000D+00  1.1000000D+00  1.0000000D-00  4.0000000D-01
+##
+##  DATASET 15:  Elementwise Data
+##  DATASET 15:  Elementwise Data                                                                                                
+## FOR 2D CASE              [PMAXFA]       [PMINFA]       [ANGFAC]       [ALMAXF]       [ALMINF]       [ATMAXF]       [ATMINF]   
+'ELEMENT'              1.0000000D+00  1.0000000D+00  1.0000000D-00  1.0000000D-00  1.0000000D-00  1.0000000D-00  1.0000000D-00  
+##     [L]  [NREG(L)]      [PMAX(L)]	  [PMIN(L)]    [ANGLEX(L)]     [ALMAX(L)]	  [ALMIN(L)]     [ATMAX(L)]     [ATMIN(L)] 
+         1          0  1.0000000D-10  1.0000000D+00  0.0000000D+00  1.0000000D-02  1.0000000D-02  1.0000000D-02  1.0000000D-02
+         2          0  1.0000000D-10  1.0000000D+00  0.0000000D+00  1.0000000D-02  1.0000000D-02  1.0000000D-02  1.0000000D-02
+         3          0  1.0000000D-10  1.0000000D+00  0.0000000D+00  1.0000000D-02  1.0000000D-02  1.0000000D-02  1.0000000D-02
+         4          0  1.0000000D-10  1.0000000D+00  0.0000000D+00  1.0000000D-02  1.0000000D-02  1.0000000D-02  1.0000000D-02
+         5          0  1.0000000D-10  1.0000000D+00  0.0000000D+00  1.0000000D-02  1.0000000D-02  1.0000000D-02  1.0000000D-02
+##
+##  DATASET 16:  (NOT USED)
+##
+##  DATASET 17:  Data for Fluid Source and Sinks
+##  [IQCP]               [QINC]               [UINC]
+1    7.D-10   0.035D-0
+7    7.D-10   0.035D-0
+00000000000000000000000000000000000000000000000000 
+##
+##  DATASET 18:  Data for Energy or Solute Mass Sources and Sinks
+##  [IQCU]              [QUINC]
+#    ***                  ***    <<< Remove "#" & supply values only if NSOU>0
+# 00000000000000000000000000000  <<< Remove "#" only if NSOU>0
+##
+##  DATASET 19:  Data for Specified Pressure Nodes
+##  [IPBC]                [PBC]                [UBC]
+6    1.0D-0   0.035D0
+12    1.0D-0   0.035D0
+00000000000000000000000000000000000000000000000000 
+##
+##  DATASET 20:  Data for Specified Concentration or Temperature Nodes
+##  [IUBC]                [UBC]
+#    ***                   ***   <<< Remove "#" & supply values only if NUBC>0
+# 00000000000000000000000000000  <<< Remove "#" only if NUBC>0
+##
+##  DATASET 21:  (NOT USED)
+##
+##  DATASET 22:  Element Incidence Data
+##    [LL]  [IIN(1)]  [IIN(2)]  [IIN(3)]  [IIN(4)] 
+'INCIDENCE'
+         1         1        2        8          7
+         2         2        3        9          8
+         3         3        4        10         9
+         4         4        5        11         10
+         5         5        6        12         11
